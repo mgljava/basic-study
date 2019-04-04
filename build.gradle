@@ -1,0 +1,37 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.github.mgljava'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor 'org.projectlombok:lombok'
+    
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+    implementation 'com.google.guava:guava:21.0'
+    implementation 'org.glassfish.hk2.external:aopalliance-repackaged:2.4.0-b34'
+    implementation 'io.projectreactor:reactor-test:3.1.4.RELEASE'
+    implementation 'org.reactivestreams:reactive-streams:1.0.2'
+    implementation 'io.projectreactor:reactor-core:3.1.8.RELEASE'
+    implementation 'cglib:cglib:3.2.7'
+    implementation 'junit:junit:4.12'
+    
+    compileOnly 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
