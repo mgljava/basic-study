@@ -23,6 +23,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework:spring-aop:5.1.4.RELEASE'
+    implementation 'org.aspectj:aspectjweaver:1.9.2'
     implementation 'com.sun.mail:javax.mail:1.6.2'
     implementation 'com.google.guava:guava:21.0'
     implementation 'org.glassfish.hk2.external:aopalliance-repackaged:2.4.0-b34'
