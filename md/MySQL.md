@@ -4,9 +4,29 @@
 - 2NF. 一是表必须有一个主键；二是没有包含在主键中的列必须完全依赖于主键，而不能只依赖于主键的一部分。
 - 3NF. 非主键列是直接依赖于主键，还是直接依赖于非主键列。所有主键列和非主键列不能有传递依赖。
 
-## MYSQL 索引
+## MySQL 索引
+#### BTree索引
+#### 哈希索引
+1. 主键索引：ALTER TABLE `table_name` ADD PRIMARY KEY (\`column\`) 
+2. 唯一索引：ALTER TABLE `table_name` ADD UNIQUE ( `column` ) 
+3. 普通索引：ALTER TABLE `table_name` ADD INDEX index_name ( `column` )
+4. 全文索引：ALTER TABLE `table_name` ADD FULLTEXT ( `column`) 
+5. 多列索引：ALTER TABLE `table_name` ADD INDEX index_name ( `column1`, `column2`, `column3` )
 
+## MySQL优化
 
+## MySQL事务
+1. ACID
+  - 原子性：事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用。
+  - 一致性：执行事务前后，数据库从一个一致性状态转换到另一个一致性状态。
+  - 隔离性：并发访问数据库时，一个用户的事物不被其他事务所干扰，各并发事务之间数据库是独立的。
+  - 持久性：一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库 发生故障也不应该对其有任何影响。
+2. 事务隔离级别
+  - READ_UNCOMMITTED（未提交读）:最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读
+  - READ_COMMITTED（提交读）:允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生
+  - REPEATABLE_READ（可重复读）:对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。
+  - SERIALIZABLE（串行）:最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。但是这将严重影响程序的性能。通常情况下也不会用到该级别。
+  
 ## MySQL函数
 ### MySQL 字符串处理函数
 1. 字符串截取：**LEFT(str, length)** 
