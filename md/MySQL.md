@@ -1,8 +1,13 @@
 # MySQL
+## 数据库的三范式（NF：Normal Form）
+- 1NF. 列的原子性，每个列不可在拆分。如：地址字段，该字段可在拆分为家庭地址和公司地址。
+- 2NF. 一是表必须有一个主键；二是没有包含在主键中的列必须完全依赖于主键，而不能只依赖于主键的一部分。
+- 3NF. 非主键列是直接依赖于主键，还是直接依赖于非主键列。所有主键列和非主键列不能有传递依赖。
+
 ## MySQL函数
 ### MySQL 字符串处理函数
 1. 字符串截取：**LEFT(str, length)** 
-```
+```sql
 mysql> SELECT LEFT('sqlstudy.com', 3);
 +-------------------------+
 | LEFT('sqlstudy.com', 3) |
@@ -11,7 +16,7 @@ mysql> SELECT LEFT('sqlstudy.com', 3);
 +-------------------------+
 ```
 2. 字符串截取：**RIGHT(str, length)**
-```
+```sql
 mysql> SELECT RIGHT('sqlstudy.com', 3);
 +--------------------------+
 | RIGHT('sqlstudy.com', 3) |
@@ -21,7 +26,7 @@ mysql> SELECT RIGHT('sqlstudy.com', 3);
 ```
 3. 字符串截取：**SUBSTRING(str, pos);** **substring(str, pos, len)**：pos 可以是负值，但 len 不能取负值。  
    3.1 从字符串的第 4 个字符位置开始取，直到结束。
-   ```
+   ```sql
    mysql> SELECT SUBSTRING('sqlstudy.com', 4);
    +------------------------------+
    | SUBSTRING('sqlstudy.com', 4) |
@@ -30,7 +35,7 @@ mysql> SELECT RIGHT('sqlstudy.com', 3);
    +------------------------------+
    ```
    3.2 从字符串的第 4 个字符位置开始取，只取 2 个字符。  
-   ```
+   ```sql
    mysql> SELECT SUBSTRING('sqlstudy.com', 4, 2);
    +---------------------------------+
    | SUBSTRING('sqlstudy.com', 4, 2) |
@@ -39,7 +44,7 @@ mysql> SELECT RIGHT('sqlstudy.com', 3);
    +---------------------------------+
    ```
    3.3 从字符串的第 4 个字符位置（倒数）开始取，直到结束。  
-   ```
+   ```sql
    mysql> SELECT SUBSTRING('sqlstudy.com', -4);
    +-------------------------------+
    | SUBSTRING('sqlstudy.com', -4) |
@@ -48,7 +53,7 @@ mysql> SELECT RIGHT('sqlstudy.com', 3);
    +-------------------------------+
    ```
    3.4 从字符串的第 4 个字符位置（倒数）开始取，只取 2 个字符。
-   ```
+   ```sql
    mysql> SELECT SUBSTRING('sqlstudy.com', -4, 2);
    +----------------------------------+
    | SUBSTRING('sqlstudy.com', -4, 2) |
@@ -58,7 +63,7 @@ mysql> SELECT RIGHT('sqlstudy.com', 3);
    ```
 4. 字符串截取：**SUBSTRING_INDEX(str,delim,count)**
    4.1 截取第二个 '.' 之前的所有字符。  
-   ```
+   ```sql
    mysql> SELECT SUBSTRING_INDEX('www.sqlstudy.com.cn', '.', 2);
    +------------------------------------------------+
    | SUBSTRING_INDEX('www.sqlstudy.com.cn', '.', 2) |
@@ -67,7 +72,7 @@ mysql> SELECT RIGHT('sqlstudy.com', 3);
    +------------------------------------------------+
    ```
    4.2 截取第二个 '.' （倒数）之后的所有字符。
-   ```
+   ```sql
    mysql> SELECT SUBSTRING_INDEX('www.sqlstudy.com.cn', '.', -2);
    +-------------------------------------------------+
    | SUBSTRING_INDEX('www.sqlstudy.com.cn', '.', -2) |
@@ -76,7 +81,7 @@ mysql> SELECT RIGHT('sqlstudy.com', 3);
    +-------------------------------------------------+
    ```
    4.3 如果在字符串中找不到 delim 参数指定的值，就返回整个字符串
-   ```
+   ```sql
    mysql> SELECT SUBSTRING_INDEX('www.sqlstudy.com.cn', '.coc', 1);
    +---------------------------------------------------+
    | SUBSTRING_INDEX('www.sqlstudy.com.cn', '.coc', 1) |
