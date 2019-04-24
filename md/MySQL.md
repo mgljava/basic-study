@@ -14,6 +14,7 @@
 5. 多列索引：ALTER TABLE `table_name` ADD INDEX index_name ( `column1`, `column2`, `column3` )
 
 ## MySQL优化
+[Mysql性能优化](https://blog.csdn.net/oChangWen/article/details/52471700)
 
 ## MySQL事务
 1. ACID
