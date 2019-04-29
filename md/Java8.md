@@ -597,7 +597,12 @@ API如下：
 6. Period：计算两个日期之间的间隔  
 7. TemporalAdjuster：校正器  
 8. TemporalAdjusters：提供了校正器的相关的静态方法  
-9. DateTimeFormatter：格式化时间和日期  
+9. DateTimeFormatter：格式化时间和日期
+- 将日期根据DateTimeFormatter提供的格式转成String类型
+```
+    final String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss"));
+    System.out.println(date);
+```
 10. ZonedDate, ZonedTime, ZonedDateTime
 ### Java8提供的重复注解和类型注解
 @Repeatable
