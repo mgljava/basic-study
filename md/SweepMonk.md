@@ -2,18 +2,18 @@
 ### 书单：
 #### Java
   1. Java基础知识
-    - Java程序设计
-    - Java核心技术卷1/2
-    - Java编程思想
-    - Effective Java中文版(第2版)
+     - Java程序设计
+     - Java核心技术卷1/2
+     - Java编程思想
+     - Effective Java中文版(第2版)
   2. 并发编程
-    - Java并发编程的艺术
-    - Java并发编程实战
-    - Java并发编程之美
+     - Java并发编程的艺术
+     - Java并发编程实战
+     - Java并发编程之美
   3. IO/NIO
-    - Netty权威指南
+     - Netty权威指南
   4. Java8
-    - Java8实战
+     - Java8实战
   5. Java优化
     - Java性能优化权威指南
 #### JVM
@@ -31,13 +31,13 @@
   
 #### 数据库
   1. MySQL
-    - MySQL 5.7 从入门到精通
-    - 数据库系统原理
-    - 高性能MySQL
-    - Effective SQL(编写高质量SQL语句的61个有效方法)
-    - 深入浅出Mybatis技术原理与实战
+     - MySQL 5.7 从入门到精通
+     - 数据库系统原理
+     - 高性能MySQL
+     - Effective SQL(编写高质量SQL语句的61个有效方法)
+     - 深入浅出Mybatis技术原理与实战
   2. Redis
-    - Redis从入门到放弃
+     - Redis从入门到放弃
 #### 代码艺术
   1. 重构 改善既有代码的设计
   2. 代码整洁之道
@@ -60,20 +60,20 @@
 #### Spring
   1. Spring Boot
   2. Spring Cloud
-    - Spring Cloud微服务实战
-    - Spring Cloud与Docker微服务架构实战
+     - Spring Cloud微服务实战
+     - Spring Cloud与Docker微服务架构实战
   3. Spring
-    - Spring技术内幕
+     - Spring技术内幕
   4. Spring MVC
-    - Spring MVC实战
+     - Spring MVC实战
   5. JPA
   6. 常用组件
   
 #### 容器化
   1. Docker
-    - Docker从入门到放弃
+     - Docker从入门到放弃
   2. Kubernetes
-    - Kubernetes权威指南
+     - Kubernetes权威指南
 #### 网络
   1. HTTP权威指南
   
@@ -87,4 +87,4 @@
   
 #### 其他语言
   1. Python
-    - Python 第二版
+     - Python 第二版
