@@ -13,4 +13,9 @@ public class NewReleasePrice extends Price {
   int getPriceCode() {
     return NEW_RELEASE;
   }
+
+  @Override
+  public int getFrequentRenterPoints(int dayRental) {
+    return dayRental > 1 ? 2 : 1;
+  }
 }

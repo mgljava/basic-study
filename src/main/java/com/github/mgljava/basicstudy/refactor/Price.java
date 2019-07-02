@@ -6,10 +6,7 @@ public abstract class Price {
 
   abstract double getCharge(int dayRental);
 
-  public int getFrequentRenterPoints(int dayRental, Movie movie) {
-    if (movie.getPriceCode() == Movie.NEW_RELEASE && dayRental > 1) {
-      return 2;
-    }
+  public int getFrequentRenterPoints(int dayRental) {
     return 1;
   }
 }

@@ -46,4 +46,8 @@ public class Movie {
         throw new IllegalArgumentException("Incorrect Price Code.");
     }
   }
+
+  public int getFrequentRenterPoints(int dayRental) {
+    return price.getFrequentRenterPoints(dayRental);
+  }
 }
