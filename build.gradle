@@ -33,7 +33,8 @@ dependencies {
     implementation 'io.projectreactor:reactor-core:3.1.8.RELEASE'
     implementation 'cglib:cglib:3.2.7'
     implementation 'junit:junit:4.12'
-    
+    // rocketMQ
+    implementation 'org.apache.rocketmq:rocketmq-client:4.5.2'
     compileOnly 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
