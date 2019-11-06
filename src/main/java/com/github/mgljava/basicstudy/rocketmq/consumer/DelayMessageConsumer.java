@@ -7,7 +7,7 @@ import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.common.message.MessageExt;
 
-public class DelayConsumer {
+public class DelayMessageConsumer {
 
   public static void main(String[] args) throws Exception {
     // 实例化消费者

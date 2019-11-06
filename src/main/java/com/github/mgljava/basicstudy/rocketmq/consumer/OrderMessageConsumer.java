@@ -13,7 +13,7 @@ import org.apache.rocketmq.common.message.MessageExt;
 /**
  * 顺序消息消费，带事务方式（应用可控制Offset什么时候提交）
  */
-public class OrderConsumer {
+public class OrderMessageConsumer {
 
   public static void main(String[] args) throws Exception {
 
