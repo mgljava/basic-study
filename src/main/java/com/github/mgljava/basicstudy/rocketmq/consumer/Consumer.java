@@ -11,9 +11,9 @@ public class Consumer {
     // 实例化消费者
     DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("consumer_group");
     // 设置NameServer的地址
-    consumer.setNamesrvAddr("127.0.0.1");
+    consumer.setNamesrvAddr("127.0.0.1:9876");
     // 订阅一个或者多个Topic，以及Tag来过滤需要消费的消息
-    consumer.subscribe("syncTopic", "*");
+    consumer.subscribe("topicTest", "*");
     // 注册回调实现类来处理从broker拉取回来的消息
     consumer.registerMessageListener((MessageListenerConcurrently) (msgs, context) -> {
       System.out.printf("%s Receive New Messages: %s %n", Thread.currentThread().getName(), msgs);

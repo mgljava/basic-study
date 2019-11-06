@@ -19,7 +19,7 @@ public class OnewayProducer {
     producer.start();
     for (int i = 0; i < 10; i++) {
       // 创建消息，并指定Topic，Tag和消息体
-      Message msg = new Message("onewayTopic", "TagA", ("Hello RocketMQ " + i).getBytes(UTF_8));
+      Message msg = new Message("topicTest", "oneWayTag", ("Hello RocketMQ " + i).getBytes(UTF_8));
       // 发送单向消息，没有任何返回结果
       producer.sendOneway(msg);
     }

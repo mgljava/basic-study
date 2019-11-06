@@ -21,7 +21,7 @@ public class SyncProducer {
 
     for (int i = 0; i < 10; i++) {
       // 创建消息，并指定Topic，Tag和消息体
-      Message message = new Message("syncTopic", "TagA", ("Hello RocketMQ " + i).getBytes(UTF_8));
+      Message message = new Message("topicTest", "syncTag", ("Hello RocketMQ " + i).getBytes(UTF_8));
       // 发送消息到一个Broker
       SendResult sendResult = producer.send(message);
       // 通过sendResult返回消息是否成功送达
