@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.classloader;
+package com.github.mgljava.basicstudy.jvm.classloader;
 
 public class ClassLoaderTest {
 

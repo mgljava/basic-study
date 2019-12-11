@@ -1,4 +1,6 @@
-package com.github.mgljava.basicstudy.classloader;
+package com.github.mgljava.basicstudy.jvm.classloader;
+
+import java.util.Random;
 
 /**
  * 如果引用的值是常量值，那么就不会加载接口，因为接口中定义的值时 public static final
@@ -15,7 +17,7 @@ public class MyTest5 {
 
 interface MyParent5 {
 
-  int A = 6;
+  int A = new Random().nextInt(3);
 }
 
 interface MyChild5 extends MyParent5 {

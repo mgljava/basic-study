@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.classloader;
+package com.github.mgljava.basicstudy.jvm.classloader;
 
 public class MyClassLoaderTest1 {
 
@@ -7,7 +7,7 @@ public class MyClassLoaderTest1 {
     Class<?> clazz = Class.forName("java.lang.Integer");
     System.out.println(clazz.getClassLoader());
 
-    Class<?> aClass = Class.forName("com.github.mgljava.basicstudy.classloader.C");
+    Class<?> aClass = Class.forName("com.github.mgljava.basicstudy.jvm.classloader.C");
     System.out.println(aClass.getClassLoader());
 
     Class<?> aClass1 = Class.forName("java.util.ArrayList");
