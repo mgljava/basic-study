@@ -9,7 +9,12 @@ import java.io.InputStream;
 public class MyClassLoader extends ClassLoader {
 
   private String classLoaderName;
-  public final String fileExtension = ".class";
+  private String fileExtension = ".class";
+  private String path;
+
+  public void setPath(String path) {
+    this.path = path;
+  }
 
   public MyClassLoader(String classLoaderName) {
     super(); // 将系统类加载器作为该类的父加载器
@@ -22,7 +27,10 @@ public class MyClassLoader extends ClassLoader {
   }
 
   @Override
-  protected Class<?> findClass(String className) throws ClassNotFoundException {
+  protected Class<?> findClass(String className) {
+    System.out.println("find class invoked! : " + className);
+    System.out.println("class loader name : " + classLoaderName);
+
     byte[] bytes = this.loadClassData(className);
     return defineClass(className, bytes, 0, bytes.length);
   }
@@ -32,7 +40,8 @@ public class MyClassLoader extends ClassLoader {
     byte[] data = null;
     ByteArrayOutputStream byteArrayOutputStream = null;
     try {
-      is = new FileInputStream(new File(className + this.fileExtension));
+      className = className.replace(".", "/");
+      is = new FileInputStream(new File(this.path + className + this.fileExtension));
       byteArrayOutputStream = new ByteArrayOutputStream();
       int ch;
       while (-1 != (ch = is.read())) {
@@ -56,14 +65,25 @@ public class MyClassLoader extends ClassLoader {
     return data;
   }
 
-  public static void test(ClassLoader classLoader) throws Exception {
-    Class<?> aClass = classLoader.loadClass("com.github.mgljava.basicstudy.Application");
-    Object object = aClass.newInstance();
-
-    System.out.println(object);
-  }
-
   public static void main(String[] args) throws Exception {
-    test(new MyClassLoader("loader1"));
+    // MyClassLoader loader1 = new MyClassLoader(new MyClassLoader("loader2"), "loader1");
+    MyClassLoader loader1 = new MyClassLoader("loader1");
+    loader1.setPath("/Users/monk/Desktop/");
+
+    Class<?> aClass = loader1.loadClass("com.github.mgljava.basicstudy.Application");
+    System.out.println("class : " + aClass.hashCode());
+    Object instance = aClass.newInstance();
+    System.out.println(instance);
+    System.out.println(instance.getClass().getClassLoader());
+    System.out.println();
+
+    MyClassLoader loader2 = new MyClassLoader("loader2");
+    loader2.setPath("/Users/monk/Desktop/");
+
+    Class<?> bClass = loader2.loadClass("com.github.mgljava.basicstudy.Application");
+    System.out.println("class : " + bClass.hashCode());
+    Object instance2 = bClass.newInstance();
+    System.out.println(instance2);
+    System.out.println(instance2.getClass().getClassLoader());
   }
 }
