@@ -66,9 +66,42 @@ public class MyClassLoader extends ClassLoader {
   }
 
   public static void main(String[] args) throws Exception {
+    loadingCLass();
+    // unloadingClass();
+  }
+
+  private static void unloadingClass() throws Exception {
+    // JVM 参数： -XX:+TraceClassUnloading  可以查看类的卸载情况
+    MyClassLoader loader1 = new MyClassLoader("loader1");
+    loader1.setPath("/Users/monk/Desktop/");
+
+    Class<?> aClass = loader1.loadClass("com.github.mgljava.basicstudy.Application");
+    System.out.println("class : " + aClass.hashCode());
+    Object instance = aClass.newInstance();
+    System.out.println(instance);
+    System.out.println(instance.getClass().getClassLoader());
+    System.out.println();
+    loader1 = null;
+    aClass = null;
+    instance = null;
+
+    System.gc(); // 执行 gc方法后  JVM输出： [Unloading class com.github.mgljava.basicstudy.Application 0x00000007c0061028]
+    Thread.sleep(100000);
+    loader1 = new MyClassLoader("loader1");
+    loader1.setPath("/Users/monk/Desktop/");
+
+    aClass = loader1.loadClass("com.github.mgljava.basicstudy.Application");
+    System.out.println("class : " + aClass.hashCode());
+    instance = aClass.newInstance();
+    System.out.println(instance);
+    System.out.println(instance.getClass().getClassLoader());
+    System.out.println();
+  }
+
+  private static void loadingCLass() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
     // MyClassLoader loader1 = new MyClassLoader(new MyClassLoader("loader2"), "loader1");
     MyClassLoader loader1 = new MyClassLoader("loader1");
-    loader1.setPath("/Desktop/");
+    loader1.setPath("/Users/monk/Desktop/");
 
     Class<?> aClass = loader1.loadClass("com.github.mgljava.basicstudy.Application");
     System.out.println("class : " + aClass.hashCode());
