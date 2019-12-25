@@ -22,7 +22,7 @@ public class MyClassLoader extends ClassLoader {
   }
 
   @Override
-  protected Class<?> loadClass(String className, boolean resolve) throws ClassNotFoundException {
+  protected Class<?> findClass(String className) throws ClassNotFoundException {
     byte[] bytes = this.loadClassData(className);
     return defineClass(className, bytes, 0, bytes.length);
   }
