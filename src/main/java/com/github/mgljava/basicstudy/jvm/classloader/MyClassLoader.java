@@ -68,7 +68,7 @@ public class MyClassLoader extends ClassLoader {
   public static void main(String[] args) throws Exception {
     // MyClassLoader loader1 = new MyClassLoader(new MyClassLoader("loader2"), "loader1");
     MyClassLoader loader1 = new MyClassLoader("loader1");
-    loader1.setPath("/Users/monk/Desktop/");
+    loader1.setPath("/Desktop/");
 
     Class<?> aClass = loader1.loadClass("com.github.mgljava.basicstudy.Application");
     System.out.println("class : " + aClass.hashCode());
@@ -77,8 +77,9 @@ public class MyClassLoader extends ClassLoader {
     System.out.println(instance.getClass().getClassLoader());
     System.out.println();
 
-    MyClassLoader loader2 = new MyClassLoader("loader2");
-    loader2.setPath("/Users/monk/Desktop/");
+    // MyClassLoader loader2 = new MyClassLoader("loader2"); // 都有自己的类加载器和命名空间
+    MyClassLoader loader2 = new MyClassLoader(loader1, "loader2"); // 如果显示指定 loader2的父加载器，那么该类将有父加载器加载
+    loader2.setPath("/Desktop/");
 
     Class<?> bClass = loader2.loadClass("com.github.mgljava.basicstudy.Application");
     System.out.println("class : " + bClass.hashCode());
