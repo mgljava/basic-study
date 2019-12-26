@@ -66,8 +66,8 @@ public class MyClassLoader extends ClassLoader {
   }
 
   public static void main(String[] args) throws Exception {
-    loadingCLass();
-    // unloadingClass();
+    // loadingCLass();
+    unloadingClass();
   }
 
   private static void unloadingClass() throws Exception {
