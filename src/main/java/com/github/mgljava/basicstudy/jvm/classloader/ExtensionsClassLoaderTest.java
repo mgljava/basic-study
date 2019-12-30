@@ -23,6 +23,6 @@ public class ExtensionsClassLoaderTest {
     System.out.println(ClassLoader.class.getClassLoader()); // null 由根加载器加载
     System.out.println(ClassLoader.getSystemClassLoader());
     System.out.println("-------------------");
-    System.out.println(System.getProperty("java.system.class.loader"));
+    System.out.println(System.getProperty("java.system.class.loader")); // 获取系统类加载器
   }
 }
