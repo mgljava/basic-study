@@ -9,7 +9,6 @@ import java.io.InputStream;
 public class MyClassLoader extends ClassLoader {
 
   private String classLoaderName;
-  private String fileExtension = ".class";
   private String path;
 
   public void setPath(String path) {
@@ -41,7 +40,7 @@ public class MyClassLoader extends ClassLoader {
     ByteArrayOutputStream byteArrayOutputStream = null;
     try {
       className = className.replace(".", "/");
-      is = new FileInputStream(new File(this.path + className + this.fileExtension));
+      is = new FileInputStream(new File(this.path + className + ".class"));
       byteArrayOutputStream = new ByteArrayOutputStream();
       int ch;
       while (-1 != (ch = is.read())) {
