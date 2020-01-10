@@ -2,7 +2,10 @@ package com.github.mgljava.basicstudy.jvm.classloader;
 
 import java.lang.reflect.Method;
 
-public class MyPersonTest {
+/**
+ * 类加载器的命名空间：命名空间由该加载器及所有父加载器加载的类组成
+ */
+public class ClassLoaderNamespaceTest {
 
   public static void main(String[] args) throws Exception{
 
