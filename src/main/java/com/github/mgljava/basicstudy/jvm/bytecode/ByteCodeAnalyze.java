@@ -1,9 +1,14 @@
 package com.github.mgljava.basicstudy.jvm.bytecode;
 
+/**
+ * 对于Java类的实例方法（非static方法）来说，每个方法都有一个隐含的参数 this。
+ * 这样就可以在实例方法中访问当前对象的属性以及其他方法
+ * 该操作是在编译期间完成的，由javac编译器在编译的时候对this的访问转换为对一个普通实例方法参数的访问
+ */
 public class ByteCodeAnalyze {
 
-  /**
-   * 对于静态代码块和静态成员变量含有初始值的情况，赋值都是在 <clinit>方法中执行的
+  /*
+    对于静态代码块和静态成员变量含有初始值的情况，赋值都是在 <clinit>方法中执行的
    */
   static {
     System.out.println("Wll");
