@@ -16,7 +16,7 @@ import java.net.ServerSocket;
  */
 public class ExceptionTableAnalyze {
 
-  private void test() {
+  private void test() throws Exception {
     try {
       InputStream is = new FileInputStream("test.txt");
 
