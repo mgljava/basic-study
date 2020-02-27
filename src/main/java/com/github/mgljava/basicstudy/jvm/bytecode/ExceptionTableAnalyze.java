@@ -13,6 +13,8 @@ import java.net.ServerSocket;
  * 1. 统一采用异常表的方式来对异常进行处理
  * 2. 在之前的JDK1.4.2之前的版本中，并不是使用异常表的方式来对异常进行处理的，而是采用特定的指令方式(jsr, ret)
  * 3. 当异常处理存在 finally语句块时，现代化的JVM采取的处理方式是将finally语句块的字节码拼接到每一个catch块后面
+ *
+ * 如果是异常在方法上被抛出，会在方法下加入一个 Exceptions 表格来对应抛出来的异常
  */
 public class ExceptionTableAnalyze {
 
