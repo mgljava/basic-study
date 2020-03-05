@@ -16,6 +16,8 @@ configurations {
 }
 
 repositories {
+    mavenLocal()
+    maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
     mavenCentral()
 }
 
@@ -33,6 +35,7 @@ dependencies {
     implementation 'io.projectreactor:reactor-core:3.1.8.RELEASE'
     implementation 'cglib:cglib:3.2.7'
     implementation 'junit:junit:4.12'
+    implementation 'cglib:cglib:3.2.8'
     // rocketMQ
     implementation 'org.apache.rocketmq:rocketmq-client:4.5.2'
     // MySQL
