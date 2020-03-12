@@ -15,7 +15,7 @@ package com.github.mgljava.basicstudy.jvm.gc;
  * 会计算每个对象年龄的大小，如果达到某个年龄后发现总大小已经大于了Survivor空间的50%，那么这时就需要调整阈值，不能再继续等到默认的15次GC后才完成晋升，
  * 因为这样会导致Survivor空间不足，所以需要调整阈值，让这些存活对象尽快完成晋升。
  */
-public class MyTest3 {
+public class TenuringThresholdTest1 {
 
   public static void main(String[] args) {
     int size = 1024 * 1024;

@@ -3,7 +3,7 @@ package com.github.mgljava.basicstudy.jvm.gc;
 /*
   通过设置JVM的参数来观察垃圾收集的输出内容
  */
-public class MyTest1 {
+public class GcDetailTest {
 
   public static void main(String[] args) {
     int size = 1024 * 1024;

@@ -1,6 +1,7 @@
 package com.github.mgljava.basicstudy.jvm.gc;
 
 /**
+ * 验证对象经过多次垃圾回收后进入老年代
  * -verbose:gc
  * -Xmx200M
  * -Xmn50M
@@ -12,7 +13,7 @@ package com.github.mgljava.basicstudy.jvm.gc;
  * -XX:MaxTenuringThreshold=3
  */
 
-public class MyTest4 {
+public class TenuringThresholdTest2 {
 
   public static void main(String[] args) throws InterruptedException {
     byte[] byte_1 = new byte[512 * 1024];
