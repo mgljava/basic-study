@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.concurrent;
+package com.github.mgljava.basicstudy.concurrency;
 
 /**
  * 实现Runnable接口来实现线程

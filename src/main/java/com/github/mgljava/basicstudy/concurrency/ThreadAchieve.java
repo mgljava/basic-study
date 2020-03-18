@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.concurrent;
+package com.github.mgljava.basicstudy.concurrency;
 
 /**
  * 通过继承Thread类来实现线程
