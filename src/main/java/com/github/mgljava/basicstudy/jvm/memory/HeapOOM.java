@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.jvm.memory.oom;
+package com.github.mgljava.basicstudy.jvm.memory;
 
 import java.util.ArrayList;
 import java.util.List;
