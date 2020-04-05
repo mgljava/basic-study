@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.EmptyStackException;
 
 /**
- * 消除过期引用
+ * 7. 消除过期引用
  */
 public class ExpireReference {
 
