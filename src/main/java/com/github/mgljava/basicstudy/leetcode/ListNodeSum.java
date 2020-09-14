@@ -41,13 +41,3 @@ public class ListNodeSum {
     return node1;
   }
 }
-
-class ListNode {
-
-  int val;
-  ListNode next;
-
-  ListNode(int x) {
-    this.val = x;
-  }
-}
