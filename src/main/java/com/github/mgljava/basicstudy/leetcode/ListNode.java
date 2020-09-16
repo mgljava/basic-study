@@ -2,10 +2,10 @@ package com.github.mgljava.basicstudy.leetcode;
 
 public class ListNode {
 
-  int val;
-  ListNode next;
+  public int val;
+  public ListNode next;
 
-  ListNode(int x) {
+  public ListNode(int x) {
     this.val = x;
     next = null;
   }
