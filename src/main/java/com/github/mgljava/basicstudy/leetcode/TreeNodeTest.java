@@ -72,5 +72,4 @@ public class TreeNodeTest {
     res.add(root.val);
     midOrderRecursion2(res, root.right);
   }
-
 }
