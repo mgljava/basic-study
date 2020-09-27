@@ -32,21 +32,28 @@ public class PowxN50 {
    * </p>
    */
 
-  public double myPow(double x, int n) {
-    if (n == 0) {
-      return 1;
-    }
-    if (n<0) {
-      return 1/myPow(x,-n);
-    }if (n%2==0) {
-      return x*myPow(x, n-1);
-    }
-    return myPow(x*x,n/2);
+  public static void main(String[] args) {
+    double v = new PowxN50().myPow2(2, -2);
+    System.out.println(v);
   }
 
-  public static void main(String[] args) {
-    double v = new PowxN50().myPow(2, 10);
-    System.out.println(v);
+  // 分治法的代码逻辑
+  public double myPow(double x, int n) {
+    if (n ==0) {
+      return 1;
+    }
+    if (n <0) {
+      return 1/myPow(x,-n);
+    }
+    if (n%2 == 0) {
+      return myPow(x*x,n/2);
+    }else {
+      return x*myPow(x*x, n/2);
+    }
+  }
+
+  public double myPow2(double x, int n) {
+    return n >0?fastPow(x,n):1/fastPow(x,-n);
   }
 
   double fastPow(double x, int n) {
@@ -54,11 +61,6 @@ public class PowxN50 {
       return 1;
     }
     double half = fastPow(x, n / 2);
-    return n % 2==0?half*half:half*half*n;
-  }
-
-  // 牛顿迭代法
-  public double myPow2(double x, int n) {
-    return 1;
+    return n % 2==0?half*half:half*half*x;
   }
 }

@@ -2,7 +2,14 @@ package com.github.mgljava.basicstudy.leetcode.easy;
 
 public class LongestCommonPrefix {
 
-  // 通过与第一个元素进行比较获取到最长公共前缀
+  public static void main(String[] args) {
+    String s = new LongestCommonPrefix().longestCommonPrefix(new String[] {"flower","flow","flight"});
+    System.out.println(s);
+  }
+
+  // 横向扫描
+
+  // 纵向扫描: 通过与第一个元素进行比较获取到最长公共前缀
   public String longestCommonPrefix(String[] strs) {
     // 不满足条件，直接返回
     if (strs == null || strs.length == 0) {
