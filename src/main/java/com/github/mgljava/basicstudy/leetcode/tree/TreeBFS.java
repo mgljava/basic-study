@@ -1,20 +1,13 @@
 package com.github.mgljava.basicstudy.leetcode.tree;
 
 import com.github.mgljava.basicstudy.leetcode.TreeNode;
+import com.github.mgljava.basicstudy.leetcode.TreeUtils;
 import java.util.ArrayDeque;
 
 public class TreeBFS {
 
   public static void main(String[] args) {
-    TreeNode root = new TreeNode(22);
-    TreeNode left = new TreeNode(33);
-    left.left = new TreeNode(66);
-    left.right = new TreeNode(77);
-    root.left = left;
-    TreeNode right = new TreeNode(44);
-    right.left = new TreeNode(9);
-    right.right = new TreeNode(10);
-    root.right = right;
+    TreeNode root = TreeUtils.getTreeNode();
     new TreeBFS().bfs(root);
   }
 

@@ -1,6 +1,7 @@
 package com.github.mgljava.basicstudy.leetcode.middle;
 
 import com.github.mgljava.basicstudy.leetcode.TreeNode;
+import com.github.mgljava.basicstudy.leetcode.TreeUtils;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,15 +16,7 @@ public class BinaryTreeLevelOrderTraversal102 {
    * @param args
    */
   public static void main(String[] args) {
-    TreeNode root = new TreeNode(22);
-    TreeNode left = new TreeNode(33);
-    left.left = new TreeNode(66);
-    left.right = new TreeNode(77);
-    root.left = left;
-    TreeNode right = new TreeNode(44);
-    right.left = new TreeNode(9);
-    right.right = new TreeNode(10);
-    root.right = right;
+    TreeNode root = TreeUtils.getTreeNode();
     List<List<Integer>> lists = new BinaryTreeLevelOrderTraversal102().levelOrder(root);
     System.out.println(lists);
   }
