@@ -8,7 +8,9 @@ import java.util.List;
 public class BinaryTreeLevelOrderTraversal102 {
 
   /**
-   * 22 33      44 66 77   9  10
+   *      22
+   *  33      44
+   * 66 77   9  10
    *
    * @param args
    */
