@@ -1,6 +1,8 @@
 package com.github.mgljava.basicstudy.leetcode;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>给定一个整数数组 nums和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。</p>
@@ -15,6 +17,7 @@ public class TwoNumberSum {
     Arrays.stream(ints).forEach(System.out::println);
   }
 
+  // 解法1：暴力，通过循环解决
   public int[] twoSum(int[] nums, int target) {
     int[] ans = new int[2];
     for (int i = 0; i < nums.length; i++) {
@@ -27,5 +30,18 @@ public class TwoNumberSum {
       }
     }
     return new int[] {-1, -1};
+  }
+
+  // 解法2：通过引入hash表来解决
+  public int[] twoSum2(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+      int tar = target - nums[i];
+      if (map.containsKey(tar)) {
+        return new int[] {map.get(tar), i};
+      }
+      map.put(nums[i], i);
+    }
+    return new int[]{-1, -1};
   }
 }

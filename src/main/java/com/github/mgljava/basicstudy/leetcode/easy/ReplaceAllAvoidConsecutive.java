@@ -1,6 +1,7 @@
 package com.github.mgljava.basicstudy.leetcode.easy;
 
 
+// 替换掉所有的问号
 public class ReplaceAllAvoidConsecutive {
 
   public static void main(String[] args) {

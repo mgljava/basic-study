@@ -53,10 +53,11 @@ public class PowxN50 {
   }
 
   public double myPow2(double x, int n) {
-    return n >0?fastPow(x,n):1/fastPow(x,-n);
+    long N = n;
+    return N >=0?fastPow(x,N):1.0/fastPow(x,-N);
   }
 
-  double fastPow(double x, int n) {
+  double fastPow(double x, long n) {
     if (n == 0) {
       return 1;
     }
