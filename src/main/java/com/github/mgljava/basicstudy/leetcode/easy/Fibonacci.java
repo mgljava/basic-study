@@ -7,7 +7,7 @@ public class Fibonacci {
     long start = System.currentTimeMillis();
     // int result = new Fibonacci().fib2(40, new int[51]); // 102334155
     // int result = new Fibonacci().fib1(40); // 102334155
-    int result = new Fibonacci().fib3(4);    // 102334155
+    int result = new Fibonacci().fib3(45);    // 134903163
     System.out.println(result);
     System.out.println("cost : " + (System.currentTimeMillis() - start));
   }
@@ -35,20 +35,19 @@ public class Fibonacci {
   }
 
   /**
-   * 3. 利用循环
+   * 3. 动态规划, 状态转移方程：dp[i] = dp[i - 1] + dp[i - 2]; 对结果进行取模运算
    */
-  public int fib3(int N) {
-    if (N <= 1) {
-      return N;
+  public int fib3(int n) {
+    if (n <= 0) {
+      return n;
     }
-    int fs = 0;
-    int fe = 1;
-    int fr = 0;
-    for (int i = 1; i < N; i++) {
-      fr = fs + fe;
-      fs = fe;
-      fe = fr;
+    int[] dp = new int[n + 1];
+    dp[0] = 0;
+    dp[1] = 1;
+    for (int i = 2; i <= n; i++) {
+      dp[i] = dp[i - 1] + dp[i - 2];
+      dp[i] %= 1000000007;
     }
-    return fr;
+    return dp[n];
   }
 }
