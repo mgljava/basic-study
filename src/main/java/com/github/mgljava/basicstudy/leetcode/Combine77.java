@@ -10,27 +10,12 @@ import java.util.List;
  * 输出: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]
  * </p>
  */
-public class Combine {
+public class Combine77 {
 
 
   public static void main(String[] args) {
-    List<List<Integer>> lists = new ArrayList<>();
-    List<Integer> list = new ArrayList<>();
-   /* new Combine().backTrace(list, 10, 2, 1);
-    System.out.println(lists);
-    System.out.println("list size： " + list.size() + "， lists size: " + lists.size());*/
-    new Combine().backTrace(lists, list, 4, 2, 1);
-    System.out.println(lists);
-  }
-
-  public int getKfromN(int n, int k) {
-    if (k > n) {
-      return 0;
-    } else if (k == n || k == 0) {
-      return 1;
-    } else {
-      return getKfromN(n - 1, k - 1) + getKfromN(n - 1, k);
-    }
+    List<List<Integer>> combine = new Combine77().combine(4, 2);
+    System.out.println(combine);
   }
 
   public List<List<Integer>> combine(int n, int k) {
