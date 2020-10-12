@@ -10,6 +10,13 @@ public class TreeUtils {
     }
   }
 
+  /**
+   *        22
+   *    33       44
+   * 66    77  9   10
+   *
+   * @return
+   */
   public static TreeNode getTreeNode() {
     TreeNode root = new TreeNode(22);
     TreeNode left = new TreeNode(33);
