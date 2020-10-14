@@ -1,28 +1,25 @@
 package com.github.mgljava.basicstudy.leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 // 1,2,3  4
 public class JinShu {
 
-  private int sum = 0;
-  private static List<List<Integer>> res = new ArrayList<>();
-
   public static void main(String[] args) {
-    new JinShu().func(new int[] {1, 2, 3}, 4, 0, new ArrayList<>());
-    System.out.println(res);
+    JinShu jinShu = new JinShu();
+    System.out.println(jinShu.compose(new int[] {3, 2, 1}, 39));
   }
 
-  public void func(int[] nums, int k, int index, List<Integer> temp) {
-    if (k == 0 || index == nums.length) {
-      res.add(new ArrayList<>(temp));
-      return;
-    } else {
-      temp.add(nums[index]);
-      func(nums, k - nums[index], index + 1, temp);
-      temp.remove(temp.size() - 1);
-      func(nums, k - nums[index], index + 1, temp);
+  /**
+   * 11111 1112 113 122 23
+   */
+  public int compose(int[] nums, int k) {
+    int[] f = new int[k + 1];
+    f[0] = 1;
+    for (int i = 0; i < nums.length; i++) {
+      int c = nums[i];
+      for (int j = c; j <= k; ++j) {
+        f[j] = f[j] + f[j - c];
+      }
     }
+    return f[k];
   }
 }

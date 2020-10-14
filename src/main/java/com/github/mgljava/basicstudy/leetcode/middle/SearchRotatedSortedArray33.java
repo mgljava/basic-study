@@ -12,6 +12,7 @@ public class SearchRotatedSortedArray33 {
     int height = nums.length - 1;
     while (low < height) {
       int mid = (low + height) / 2;
+      // 4 7
       if (nums[0] <= nums[mid] && (target > nums[mid] || target < nums[0])) {
         low = mid + 1;
       } else if (target > nums[mid] && target < nums[0]) {
