@@ -33,7 +33,7 @@ public class FindCommonCharacters {
     for (int i = 0; i < res.length; i++) {
       if (res[i] > 0) {
         for (int j = 0; j < res[i]; j++) {
-          ans.add(((char)('a' + i) + ""));
+          ans.add(((char) ('a' + i) + ""));
         }
       }
     }
