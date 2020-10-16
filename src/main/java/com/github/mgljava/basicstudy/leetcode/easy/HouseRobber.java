@@ -33,9 +33,10 @@ public class HouseRobber {
     int[] dp = new int[n + 1];
     dp[0] = 0;
     dp[1] = nums[0];
-    for (int i = 1; i < nums.length; i++) {
+    for (int i = 2; i < nums.length; i++) {
       int v = nums[i];
-      dp[i + 1] = Math.max(dp[i - 1] + v, dp[i]);
+      dp[i] = Math.max(dp[i-2]+v, dp[i]);
+      // dp[i + 1] = Math.max(dp[i - 1] + v, dp[i]);
     }
     return dp[n];
   }
