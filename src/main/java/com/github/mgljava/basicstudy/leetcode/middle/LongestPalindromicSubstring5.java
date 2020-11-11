@@ -1,7 +1,5 @@
 package com.github.mgljava.basicstudy.leetcode.middle;
 
-import java.util.Arrays;
-
 // 最长回文子串
 public class LongestPalindromicSubstring5 {
 
@@ -42,26 +40,25 @@ public class LongestPalindromicSubstring5 {
       return "";
     }
 
-    int length = s.length();
-    String[] dp = new String[length];
-    dp[0] = s.charAt(0) + "";
-    for (int i = 1; i < length; i++) {
-      int lo = i;
-      int hi = i;
-      while (hi < length && lo >= 0 && s.charAt(lo) == s.charAt(hi)) {
-        dp[i] = s.substring(lo, hi + 1);
-        if (s.charAt(lo--) == s.charAt(i)) {
-          lo--;
-          continue;
-        } else if (s.charAt(i) == s.charAt(hi++)) {
-          hi++;
-          continue;
-        }
-        lo--;
-        hi++;
+    int start = 0;
+    int end = 0;
+    for (int i = 0; i < s.length(); i++) {
+      int len1 = expandAroundCenter(s, i, i);
+      int len2 = expandAroundCenter(s, i, i + 1);
+      int len = Math.max(len1, len2);
+      if (len > end - start) {
+        start = i - (len - 1) / 2;
+        end = i + len / 2;
       }
     }
-    Arrays.stream(dp).forEach(System.out::println);
-    return "";
+    return s.substring(start, end + 1);
+  }
+
+  public int expandAroundCenter(String str, int start, int end) {
+    while (start >= 0 && end <= str.length() && str.charAt(start) == str.charAt(end)) {
+      start--;
+      end++;
+    }
+    return end - start - 1;
   }
 }
