@@ -25,6 +25,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.github.mgljava:myapp-spring-boot-starter:1.0-SNAPSHOT'
     implementation 'org.springframework:spring-aop:5.1.4.RELEASE'
     implementation 'org.aspectj:aspectjweaver:1.9.2'
     implementation 'com.sun.mail:javax.mail:1.6.2'
@@ -41,6 +42,8 @@ dependencies {
 
     // ASM字节码增强库
     implementation group: 'org.ow2.asm', name: 'asm', version: '9.0'
+
+    implementation 'org.apache.httpcomponents:httpclient:4.5.5'
 
     // MySQL
     implementation 'mysql:mysql-connector-java:5.1.46'
