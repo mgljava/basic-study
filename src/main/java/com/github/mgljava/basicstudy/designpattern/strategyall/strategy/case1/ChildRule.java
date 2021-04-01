@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.designpattern.strategy.case1;
+package com.github.mgljava.basicstudy.designpattern.strategyall.strategy.case1;
 
 public class ChildRule implements AbstractRule {
 

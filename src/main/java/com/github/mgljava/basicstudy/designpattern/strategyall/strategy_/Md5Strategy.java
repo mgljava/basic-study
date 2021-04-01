@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.designpattern.strategy_;
+package com.github.mgljava.basicstudy.designpattern.strategyall.strategy_;
 
 public class Md5Strategy implements Strategy {
 

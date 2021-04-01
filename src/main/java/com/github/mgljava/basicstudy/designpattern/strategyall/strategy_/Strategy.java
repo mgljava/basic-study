@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.designpattern.strategy_;
+package com.github.mgljava.basicstudy.designpattern.strategyall.strategy_;
 
 // 策略接口，定义要执行的内容
 public interface Strategy {

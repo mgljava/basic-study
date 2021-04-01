@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.designpattern.strategy.case2;
+package com.github.mgljava.basicstudy.designpattern.strategyall.strategy.case2;
 
 /**
  * 验证输入的内容是否根据标准进行了恰当的格式化.

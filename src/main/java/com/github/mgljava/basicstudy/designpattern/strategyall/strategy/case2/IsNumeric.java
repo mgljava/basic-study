@@ -1,4 +1,4 @@
-package com.github.mgljava.basicstudy.designpattern.strategy.case2;
+package com.github.mgljava.basicstudy.designpattern.strategyall.strategy.case2;
 
 public class IsNumeric implements ValidationStrategy {
 
