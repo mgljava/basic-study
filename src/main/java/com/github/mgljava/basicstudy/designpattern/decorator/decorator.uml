@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="117.0" y="99.0">com.github.mgljava.basicstudy.designpattern.decorator.ConcreteDecoratorB</node>
+    <node x="189.0" y="18.0">com.github.mgljava.basicstudy.designpattern.decorator.ConcreteComponent</node>
+    <node x="-103.0" y="99.0">com.github.mgljava.basicstudy.designpattern.decorator.ConcreteDecoratorA</node>
+    <node x="45.0" y="18.0">com.github.mgljava.basicstudy.designpattern.decorator.Decorator</node>
+    <node x="133.75" y="-63.0">com.github.mgljava.basicstudy.designpattern.decorator.Component</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.github.mgljava.basicstudy.designpattern.decorator.ConcreteDecoratorA" target="com.github.mgljava.basicstudy.designpattern.decorator.Decorator">
+      <point x="0.0" y="-15.5" />
+      <point x="100.0" y="137.0" />
+      <point x="179.0" y="137.0" />
+      <point x="-31.0" y="15.5" />
+    </edge>
+    <edge source="com.github.mgljava.basicstudy.designpattern.decorator.ConcreteDecoratorB" target="com.github.mgljava.basicstudy.designpattern.decorator.Decorator">
+      <point x="0.0" y="-15.5" />
+      <point x="320.0" y="137.0" />
+      <point x="241.0" y="137.0" />
+      <point x="31.0" y="15.5" />
+    </edge>
+    <edge source="com.github.mgljava.basicstudy.designpattern.decorator.Decorator" target="com.github.mgljava.basicstudy.designpattern.decorator.Component">
+      <point x="0.0" y="-15.5" />
+      <point x="210.0" y="56.0" />
+      <point x="267.75" y="56.0" />
+      <point x="-31.0" y="15.5" />
+    </edge>
+    <edge source="com.github.mgljava.basicstudy.designpattern.decorator.ConcreteComponent" target="com.github.mgljava.basicstudy.designpattern.decorator.Component">
+      <point x="0.0" y="-15.5" />
+      <point x="387.5" y="56.0" />
+      <point x="329.75" y="56.0" />
+      <point x="31.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="366.5" y="168.5" />
+  <SelectedNodes>
+    <node>com.github.mgljava.basicstudy.designpattern.decorator.ConcreteDecoratorB</node>
+    <node>com.github.mgljava.basicstudy.designpattern.decorator.ConcreteComponent</node>
+    <node>com.github.mgljava.basicstudy.designpattern.decorator.ConcreteDecoratorA</node>
+    <node>com.github.mgljava.basicstudy.designpattern.decorator.Decorator</node>
+    <node>com.github.mgljava.basicstudy.designpattern.decorator.Component</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
