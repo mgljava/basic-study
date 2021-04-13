@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="114.0" y="68.0">com.github.mgljava.basicstudy.designpattern.newversion.command.Invoker</node>
+    <node x="34.77916666666667" y="-13.0">com.github.mgljava.basicstudy.designpattern.newversion.command.Receiver</node>
+    <node x="-13.0" y="68.0">com.github.mgljava.basicstudy.designpattern.newversion.command.ConcreteCommand</node>
+    <node x="49.6125" y="-94.0">com.github.mgljava.basicstudy.designpattern.newversion.command.Command</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.github.mgljava.basicstudy.designpattern.newversion.command.Invoker" target="com.github.mgljava.basicstudy.designpattern.newversion.command.Command">
+      <point x="-26.75" y="-15.5" />
+      <point x="26.75" y="142.0" />
+      <point x="61.15416666666667" y="142.0" />
+      <point x="-40.125" y="15.5" />
+    </edge>
+    <edge source="com.github.mgljava.basicstudy.designpattern.newversion.command.Command" target="com.github.mgljava.basicstudy.designpattern.newversion.command.Receiver">
+      <point x="-26.75" y="-15.5" />
+      <point x="74.52916666666667" y="56.0" />
+      <point x="81.94583333333334" y="56.0" />
+      <point x="-38.66666666666666" y="15.5" />
+    </edge>
+    <edge source="com.github.mgljava.basicstudy.designpattern.newversion.command.ConcreteCommand" target="com.github.mgljava.basicstudy.designpattern.newversion.command.Command">
+      <point x="-58.33333333333334" y="-15.5" />
+      <point x="156.16666666666666" y="142.0" />
+      <point x="114.65416666666667" y="142.0" />
+      <point x="13.375" y="15.5" />
+    </edge>
+    <edge source="com.github.mgljava.basicstudy.designpattern.newversion.command.ConcreteCommand" target="com.github.mgljava.basicstudy.designpattern.newversion.command.Receiver">
+      <point x="58.33333333333334" y="-15.5" />
+      <point x="272.83333333333337" y="142.0" />
+      <point x="243.04166666666669" y="142.0" />
+      <point x="243.04166666666669" y="56.0" />
+      <point x="159.27916666666664" y="56.0" />
+      <point x="38.66666666666666" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="339.5" y="6.5" />
+  <SelectedNodes>
+    <node>com.github.mgljava.basicstudy.designpattern.newversion.command.Invoker</node>
+    <node>com.github.mgljava.basicstudy.designpattern.newversion.command.Receiver</node>
+    <node>com.github.mgljava.basicstudy.designpattern.newversion.command.ConcreteCommand</node>
+    <node>com.github.mgljava.basicstudy.designpattern.newversion.command.Command</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
