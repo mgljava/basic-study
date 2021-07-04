@@ -1,5 +1,6 @@
 package com.github.mgljava.basicstudy.thread;
 
+
 public class ThreadLocalTest {
 
   static ThreadLocal<String> threadLocal = new ThreadLocal<>();
